@@ -1,0 +1,54 @@
+/* ===========================
+   Inputs — cajas de texto, combos, sliders
+   =========================== */
+
+QTextEdit, QPlainTextEdit {
+    background-color: #313244;
+    color: #cdd6f4;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 6px;
+    selection-background-color: #585b70;
+}
+
+QComboBox {
+    background-color: #313244;
+    color: #cdd6f4;
+    border: 1px solid #45475a;
+    border-radius: 6px;
+    padding: 4px 8px;
+}
+
+QComboBox:hover {
+    border-color: #585b70;
+}
+
+QComboBox::drop-down {
+    border: none;
+}
+
+QComboBox QAbstractItemView {
+    background-color: #313244;
+    color: #cdd6f4;
+    selection-background-color: #45475a;
+    border: 1px solid #45475a;
+}
+
+QSlider::groove:horizontal {
+    height: 6px;
+    background-color: #313244;
+    border-radius: 3px;
+}
+
+QSlider::handle:horizontal {
+    width: 16px;
+    height: 16px;
+    margin: -5px 0;
+    background-color: #cdd6f4;
+    border-radius: 8px;
+}
+
+QSlider::sub-page:horizontal {
+    background-color: #45475a;
+    border-radius: 3px;
+}

@@ -1,0 +1,26 @@
+/* ===========================
+   Pestañas  QTabWidget
+   =========================== */
+
+QTabWidget::pane {
+    border: 1px solid #45475a;
+    background-color: #1e1e2e;
+}
+
+QTabBar::tab {
+    background-color: #313244;
+    color: #a6adc8;
+    padding: 8px 16px;
+    margin-right: 2px;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+}
+
+QTabBar::tab:selected {
+    background-color: #45475a;
+    color: #cdd6f4;
+}
+
+QTabBar::tab:hover:!selected {
+    background-color: #3a3b4e;
+}

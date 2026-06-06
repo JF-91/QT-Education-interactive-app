@@ -1,0 +1,33 @@
+/* ===========================
+   Global — ventana y menús
+   =========================== */
+
+QMainWindow {
+    background-color: #1e1e2e;
+    color: #cdd6f4;
+}
+
+/* Barra de menú */
+QMenuBar {
+    background-color: #181825;
+    color: #cdd6f4;
+    padding: 2px;
+}
+
+QMenuBar::item:selected {
+    background-color: #45475a;
+    border-radius: 4px;
+}
+
+/* Menús desplegables */
+QMenu {
+    background-color: #313244;
+    color: #cdd6f4;
+    border: 1px solid #45475a;
+    padding: 4px;
+}
+
+QMenu::item:selected {
+    background-color: #45475a;
+    border-radius: 4px;
+}

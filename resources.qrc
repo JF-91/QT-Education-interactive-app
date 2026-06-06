@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/style">
+        <file alias="global.qss">resources/style/global.qss</file>
+        <file alias="buttons.qss">resources/style/buttons.qss</file>
+        <file alias="inputs.qss">resources/style/inputs.qss</file>
+        <file alias="tabs.qss">resources/style/tabs.qss</file>
+    </qresource>
+</RCC>

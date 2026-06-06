@@ -1,0 +1,54 @@
+/* ===========================
+   Botones
+   =========================== */
+
+QPushButton {
+    background-color: #45475a;
+    color: #cdd6f4;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+QPushButton:hover {
+    background-color: #585b70;
+}
+
+QPushButton:pressed {
+    background-color: #313244;
+}
+
+QRadioButton {
+    color: #cdd6f4;
+    spacing: 6px;
+}
+
+QRadioButton::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 8px;
+    border: 2px solid #45475a;
+}
+
+QRadioButton::indicator:checked {
+    background-color: #cdd6f4;
+    border-color: #cdd6f4;
+}
+
+QCheckBox {
+    color: #cdd6f4;
+    spacing: 6px;
+}
+
+QCheckBox::indicator {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    border: 2px solid #45475a;
+}
+
+QCheckBox::indicator:checked {
+    background-color: #cdd6f4;
+    border-color: #cdd6f4;
+}
