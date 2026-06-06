@@ -11,7 +11,7 @@ qt_add_executable(TabMenu
         src/ui/mainwindow.cpp
         src/ui/mainwindow.h
         src/ui/mainwindow.ui
-    resources.qrc
+        src/resources/resources.qrc
 )
 
 target_link_libraries(TabMenu
