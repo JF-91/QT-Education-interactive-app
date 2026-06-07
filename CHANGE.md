@@ -1,5 +1,8 @@
 # Features
+
+- implement QPdfDocument and QPdfView at host window and allow open pdf.
 - create develop branch and new src structure.
+
 
 
 

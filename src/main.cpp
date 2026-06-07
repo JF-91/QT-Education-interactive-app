@@ -2,14 +2,13 @@
 
 #include <QApplication>
 #include <QFile>
+#include <QString>
 
 static QString loadQss(const QString &path)
 {
     QFile file(path);
     if (file.open(QFile::ReadOnly | QFile::Text)) {
-        const QString content = file.readAll();
-        file.close();
-        return content;
+        return QString::fromUtf8(file.readAll());
     }
     return {};
 }
@@ -27,5 +26,5 @@ int main(int argc, char *argv[])
 
     MainWindow w;
     w.show();
-    return QApplication::exec();
+    return a.exec();
 }
