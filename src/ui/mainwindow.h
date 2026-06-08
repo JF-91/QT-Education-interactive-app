@@ -27,7 +27,7 @@ private:
 
     Ui::MainWindow *ui;
     std::unique_ptr<DocumentManager> m_documentManager;
-    PdfViewerWidget* m_pdfViewer;
+    PdfViewerWidget* m_pdfViewer = nullptr; // owned by Qt parent (centralwidget)
 
 private slots:
     void openPdf();

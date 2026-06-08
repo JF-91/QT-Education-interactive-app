@@ -16,7 +16,6 @@ MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
     , m_documentManager(std::make_unique<DocumentManager>())
-    , m_pdfViewer(new PdfViewerWidget(this))
 {
     ui->setupUi(this);
     setupUi();
@@ -28,6 +27,8 @@ void MainWindow::setupUi()
     setWindowTitle(tr("Interactive Educational Reader"));
     resize(1200, 800);
 
+    m_pdfViewer = new PdfViewerWidget(ui->centralwidget);
+
     auto* layout = new QVBoxLayout(ui->centralwidget);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->addWidget(m_pdfViewer);
@@ -35,7 +36,7 @@ void MainWindow::setupUi()
 
 void MainWindow::setupMenu()
 {
-    QMenu* fileMenu = menuBar()->addMenu(tr("File");
+    QMenu* fileMenu = menuBar()->addMenu(tr("File"));
 
     QAction* openAction = fileMenu->addAction(tr("Open PDF..."));
     connect(openAction, &QAction::triggered, this, &MainWindow::openPdf);
@@ -63,7 +64,7 @@ void MainWindow::openPdf()
         QMessageBox::warning(
             this,
             "Error",
-            "No se pudo abrir el archivo PDF."
+            "it ist not possible to open the PDF file."
         );
         return;
     }
