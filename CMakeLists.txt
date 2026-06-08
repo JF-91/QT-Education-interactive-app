@@ -18,6 +18,11 @@ qt_add_executable(EducationInteractiveApp
         src/ui/PdfViewerWidget.h
 )
 
+target_include_directories(EducationInteractiveApp
+    PRIVATE
+        src
+)
+
 target_link_libraries(EducationInteractiveApp
     PRIVATE
         Qt::Core

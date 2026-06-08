@@ -14,7 +14,7 @@
 PdfViewerWidget::PdfViewerWidget(QWidget* parent)
     : QWidget(parent)
     , m_pdfView(new QPdfView(this))
-    , m_previousButton(new QPushButton("prev", this))
+    , m_previousButton(new QPushButton("previous", this))
     , m_nextButton(new QPushButton("next", this))
     , m_currentPage(0)
 {

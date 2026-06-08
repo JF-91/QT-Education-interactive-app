@@ -2,7 +2,7 @@
 #include "ui_mainwindow.h"
 
 #include "PdfViewerWidget.h"
-#include "../core/DocumentManager.h"
+#include "core/DocumentManager.h"
 
 #include <QAction>
 #include <QFileDialog>
@@ -35,12 +35,12 @@ void MainWindow::setupUi()
 
 void MainWindow::setupMenu()
 {
-    QMenu* fileMenu = menuBar()->addMenu("File");
+    QMenu* fileMenu = menuBar()->addMenu(tr("File");
 
-    QAction* openAction = fileMenu->addAction("Open PDF...");
+    QAction* openAction = fileMenu->addAction(tr("Open PDF..."));
     connect(openAction, &QAction::triggered, this, &MainWindow::openPdf);
 
-    QAction* exitAction = fileMenu->addAction("Exit");
+    QAction* exitAction = fileMenu->addAction(tr("Exit"));
     connect(exitAction, &QAction::triggered, this, &QWidget::close);
 }
 
