@@ -6,15 +6,17 @@
 
 #include <QAction>
 #include <QFileDialog>
+#include <QFileInfo>
 #include <QMenu>
 #include <QMenuBar>
 #include <QMessageBox>
+#include <QVBoxLayout>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
+    , m_documentManager(std::make_unique<DocumentManager>())
     , m_pdfViewer(new PdfViewerWidget(this))
-    , m_documentManager(new DocumentManager())
 {
     ui->setupUi(this);
     setupUi();
@@ -23,10 +25,12 @@ MainWindow::MainWindow(QWidget *parent)
 
 void MainWindow::setupUi()
 {
-    setWindowTitle("Interactive Educational Reader");
+    setWindowTitle(tr("Interactive Educational Reader"));
     resize(1200, 800);
 
-    setCentralWidget(m_pdfViewer);
+    auto* layout = new QVBoxLayout(ui->centralwidget);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->addWidget(m_pdfViewer);
 }
 
 void MainWindow::setupMenu()
@@ -65,6 +69,9 @@ void MainWindow::openPdf()
     }
 
     m_pdfViewer->setDocument(m_documentManager->document());
+
+    const QString fileName = QFileInfo(filePath).fileName();
+    setWindowTitle(tr("Interactive Educational Reader - %1").arg(fileName));
 }
 
 MainWindow::~MainWindow()

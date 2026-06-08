@@ -2,11 +2,8 @@
 // Created by sircraft-gaming on 6/6/26.
 //
 
-#pragma once
-
 #ifndef TABMENU_DOCUMENTMANAGER_H
 #define TABMENU_DOCUMENTMANAGER_H
-
 
 #include <memory>
 #include <QString>

@@ -10,8 +10,8 @@ class MainWindow;
 }
 QT_END_NAMESPACE
 
-class PdfViewerWidget;
 class DocumentManager;
+class PdfViewerWidget;
 
 class MainWindow : public QMainWindow
 {
@@ -24,11 +24,12 @@ public:
 private:
     void setupUi();
     void setupMenu();
-    void openPdf();
 
     Ui::MainWindow *ui;
-
-    PdfViewerWidget* m_pdfViewer;
     std::unique_ptr<DocumentManager> m_documentManager;
+    PdfViewerWidget* m_pdfViewer;
+
+private slots:
+    void openPdf();
 };
 #endif // MAINWINDOW_H
