@@ -5,9 +5,32 @@
 #ifndef TABMENU_PDFVIEWERWIDGET_H
 #define TABMENU_PDFVIEWERWIDGET_H
 
+#include <QFileDialog>
+#include <QWidget>
 
-class PdfViewerWidget
+class QPdfDocument;
+class QPdfView;
+
+class PdfViewerWidget: public QWidget
 {
+    Q_OBJECT
+public:
+    explicit PdfViewerWidget(QWidget* parent = nullptr);
+
+    void setDocument(QPdfDocument* document);
+
+private slots:
+    void previousPage();
+    void nextPage();
+    void updateNavigationButtons();
+private:
+    void goToPage(int page);
+    
+    QPdfView* m_pdfView;
+    QPushButton* m_previousButton;
+    QPushButton* m_nextButton;
+
+    int m_currentPage;
 };
 
 
