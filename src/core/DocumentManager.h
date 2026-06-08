@@ -2,8 +2,8 @@
 // Created by sircraft-gaming on 6/6/26.
 //
 
-#ifndef TABMENU_DOCUMENTMANAGER_H
-#define TABMENU_DOCUMENTMANAGER_H
+#ifndef EDUCATIONINTERACTIVEAPP_DOCUMENTMANAGER_H
+#define EDUCATIONINTERACTIVEAPP_DOCUMENTMANAGER_H
 
 #include <memory>
 #include <QString>
@@ -22,4 +22,4 @@ private:
     std::unique_ptr<QPdfDocument> m_document;
 };
 
-#endif //TABMENU_DOCUMENTMANAGER_H
+#endif // EDUCATIONINTERACTIVEAPP_DOCUMENTMANAGER_H
